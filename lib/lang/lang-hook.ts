@@ -1,6 +1,7 @@
+'use client';
 import { dictionary } from '@/locales';
 import { useEffect, useState } from 'react';
-import { getLang } from './getLangServer';
+import { getLang } from './lang';
 
 export function useLang() {
   const [langData, setLangData] = useState({
@@ -15,7 +16,7 @@ export function useLang() {
     }
 
     fetchLang();
-  }, []); // Ejecuta el efecto solo una vez al montar el componente
+  }, []); 
 
   return langData;
 }

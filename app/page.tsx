@@ -1,5 +1,5 @@
 import TestComponet from '@/components/TestComponent';
-import { getLang } from '@/lib/getLangServer';
+import { getLang } from '@/lib/lang';
 import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Next 14 LANG Demo',

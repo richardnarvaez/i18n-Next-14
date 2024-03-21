@@ -1,7 +1,6 @@
 'use client';
 import { useLang } from '@/lib/lang';
-// import getLang from '@/lib/lang';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function TestComponet() {
   const { lang, dictionary: t } = useLang();

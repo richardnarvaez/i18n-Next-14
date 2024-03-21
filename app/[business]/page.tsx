@@ -1,4 +1,4 @@
-import { getLang } from '@/lib/getLangServer';
+import { getLang } from '@/lib/lang';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
