@@ -1,15 +1,19 @@
-import { dictionary } from '@/locales';
+import TestComponet from '@/components/TestComponent';
+import { getLang } from '@/lib/getLangServer';
 import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Next 14 LANG Demo',
   description: 'Page for Demo',
-}
-function Page({ params }: { params: { lang: string } }) {
-  const t = dictionary[params.lang];
+};
+
+async function Page({ params }: { params: { lang: string } }) {
+  const {lang, dictionary: t}: any = await getLang();
+  console.log("SERVER: ", t)
   return (
     <div>
       <h1>H1. {t?.homeHeader}</h1>
       <p>p. {t?.homeContent}</p>
+      <TestComponet />
       <div className="switch-lang border rounded p-3 flex gap-4">
         <a href="/es" className="border bg-gray-50 rounded py-1 px-4">
           es
