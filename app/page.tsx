@@ -8,25 +8,25 @@ export const metadata: Metadata = {
 };
 
 async function Page({ params }: { params: { lang: string } }) {
-  const {lang, dictionary: t}: any = await getLang();
-  console.log("SERVER: ", t)
+  const { lang, dictionary } = await getLang();
+
+  const t = dictionary?.HomePage;
+
   return (
     <div>
-      <h1>H1. {t?.homeHeader}</h1>
-      <p>p. {t?.homeContent}</p>
-      <TestComponet />
-      <div className="switch-lang border rounded p-3 flex gap-4">
-        <a href="/es" className="border bg-gray-50 rounded py-1 px-4">
-          es
-        </a>
-        <a href="/en" className="border bg-gray-50 rounded py-1 px-4">
-          en
-        </a>
+      <div>
+        <h1>H1. {t?.homeHeader}</h1>
+        <p>p. {t?.homeContent}</p>
       </div>
+      <TestComponet />
 
-      <div className='flex gap-3'>
-        <Link href={"/business"}>Business</Link>
-        <Link href={"/business/1231"}>Business with id</Link>
+      <div className="border rounded mt-4 p-3">
+        <p>Links</p>
+        <div className="flex gap-3">
+          <Link href={'/business'}>Business: /business </Link>
+          <Link href={'/business/1231'}>Business with id: /business/1231</Link>
+          <Link href={'/about'}>About: /about</Link>
+        </div>
       </div>
     </div>
   );

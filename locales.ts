@@ -1,33 +1,56 @@
 interface DictionaryEntry {
-  homeHeader: string;
-  homeContent: string;
-  aboutHeader: string;
-  aboutContent: string;
-  BusinessPage: any;
-  Common: any;
+  HomePage: {
+    homeHeader: string;
+    homeContent: string;
+  };
+  AboutPage: {
+    aboutHeader: string;
+    aboutContent: string;
+  };
+  BusinessPage: {
+    title: string;
+    description: string;
+  };
+  Common: {
+    clientSide: string;
+  };
 }
 
 export const dictionary: Record<string, DictionaryEntry> = {
   en: {
-    homeHeader: 'Home',
-    homeContent: 'Welcome to my home.',
-    aboutHeader: 'About Me',
-    aboutContent:
-      'Here is some information about me. English is my primary language.',
-    Common: {},
+    HomePage: {
+      homeHeader: 'Home',
+      homeContent: 'Welcome to my home.',
+    },
+    AboutPage: {
+      aboutHeader: 'About Me',
+      aboutContent:
+        'Here is some information about me. English is my primary language.',
+    },
+    Common: {
+      clientSide: 'Client Side Rendering',
+    },
     BusinessPage: {
-      title: 'Business',
+      title: 'Business Page',
+      description: 'This is a description',
     },
   },
   es: {
-    homeHeader: 'Casa',
-    homeContent: 'Beinvenidos a mi casa.',
-    aboutHeader: 'Sobre Yo',
-    aboutContent:
-      'Aqui tenemos un poco informacion sobre yo. Hablo espanol tambien.',
-    BusinessPage: {
-      title: 'Empresa',
+    HomePage: {
+      homeHeader: 'Pantalla principal',
+      homeContent: 'Bienvenidos a mi casa.',
     },
-    Common: {},
+    AboutPage: {
+      aboutHeader: 'Sobre mi',
+      aboutContent:
+        'Aqui tenemos un poco informacion sobre mi. Hablo espanol tambien.',
+    },
+    BusinessPage: {
+      title: 'Pagina de la Empresa',
+      description: 'Esto es una descripcion',
+    },
+    Common: {
+      clientSide: 'Renderizado en el lado del Cliente',
+    },
   },
 };

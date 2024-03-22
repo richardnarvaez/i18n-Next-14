@@ -11,9 +11,10 @@ export default async function Pagae({ params }: any) {
   const t = dictionary?.BusinessPage;
   return (
     <div>
-      <h1>
-        {t.title}: {params.business}
-      </h1>
+      <h1>{t?.title}</h1>
+      <h2>{t?.description}</h2>
+      <h3>ID Business: {params.business}</h3>
+      <h4>LANG: {lang}</h4>
     </div>
   );
 }

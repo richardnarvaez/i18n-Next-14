@@ -1,7 +1,13 @@
-import { dictionary } from '@/locales';
+import { getLang } from '@/lib/lang';
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'About',
+  description: 'Page for Demo',
+};
 
-function Page({ params }: { params: { lang: string } }) {
-  const t = dictionary[params.lang];
+async function Page() {
+  const { dictionary } = await getLang();
+  const t = dictionary?.AboutPage;
   return (
     <div>
       <h1>{t?.aboutHeader}</h1>
