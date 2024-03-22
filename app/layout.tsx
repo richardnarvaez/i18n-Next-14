@@ -25,7 +25,7 @@ export default function RootLayout({
         <body className={inter.className}>
           <div className="relative flex flex-col min-h-screen">
             <div className="container flex-1 py-8 prose lg:prose-lg">
-              <div className="switch-lang items-center justify-between border rounded p-3 flex gap-4 mb-4">
+              <div className="switch-lang bg-white items-center justify-between border rounded p-3 flex gap-4 mb-4">
                 <Link href="/">i18n Demo</Link>
                 <div className="flex gap-2">
                   <LangMenu />
