@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-
-const locales = ['en', 'es'];
-const defaultLocale = 'en';
+import { defaultLocale, locales } from './config/lang';
 
 export function middleware(request: NextRequest) {
   //TODO: Detectar ?lang=es y relizar el cambio - PARA BOTON SWITCH LANG
@@ -47,10 +45,7 @@ export function middleware(request: NextRequest) {
       }${pathname}`,
     );
 
-    const newUrl = new URL(
-      `${pathname}`,
-      request.nextUrl,
-    );
+    const newUrl = new URL(`${pathname}`, request.nextUrl);
     return NextResponse.rewrite(newUrl);
   }
 }
