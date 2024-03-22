@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
-import { defaultLocale } from '@/middleware';
 import './globals.css';
+import { defaultLocale } from '@/config/lang';
 
 const inter = Inter({
   subsets: ['latin'],
