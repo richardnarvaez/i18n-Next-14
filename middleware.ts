@@ -48,11 +48,7 @@ export function middleware(request: NextRequest) {
     );
 
     const newUrl = new URL(
-      `/${
-        cookieLocale && locales.includes(cookieLocale)
-          ? cookieLocale
-          : defaultLocale
-      }${pathname}`,
+      `${pathname}`,
       request.nextUrl,
     );
     return NextResponse.rewrite(newUrl);
