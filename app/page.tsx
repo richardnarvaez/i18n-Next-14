@@ -23,8 +23,10 @@ async function Page({ params }: { params: { lang: string } }) {
       <div className="border rounded mt-4 p-3">
         <p>Links</p>
         <div className="flex gap-3">
-          <Link href={'/business'}>Business: /business </Link>
-          <Link href={'/business/1231'}>Business with id: /business/1231</Link>
+          <Link href={'/business'}>Business: /[business] </Link>
+          <Link href={'/business/1231'}>
+            Business with id: /[business]/[1231]
+          </Link>
           <Link href={'/about'}>About: /about</Link>
         </div>
       </div>
